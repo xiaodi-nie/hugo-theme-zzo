@@ -12,6 +12,9 @@
     {{ partial "head/meta_json_ld" . }}
     {{ partial "head/services" . }}
     {{ partial "head/custom-head" . }}
+    {{ if or .Params.math .Site.Params.math }}
+        {{ partial "math.html" . }}
+    {{ end }}
 </head>
 
 <body id="root" class="theme__{{ index .Site.Params.themeOptions 0 }}">
