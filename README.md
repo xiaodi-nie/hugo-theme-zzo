@@ -247,9 +247,13 @@ themeOptions = ["dark", "light", "hacker", "solarized", "kimbie"] # select optio
 notAllowedTypesInHome = ["contact", "talks", "about", "showcase"] # not allowed page types in home page. type can be set in front matter or default to folder name.
 notAllowedTypesInHomeSidebar = ["about", "archive", "showcase"] # not allowed page types in home page sidebar(recent post titles).
 notAllowedTypesInArchive = ["about", "talks", "showcase"] # not allowed page types in archive page
+notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
 
 # header
 homeHeaderType = "text" # text, img, slide
+
+# menu
+showMobileMenuTerms = ["tags", "categories", "series"]
 
 # navbar
 enableThemeChange = true # site color theme
@@ -293,6 +297,8 @@ tocFolding = false
 enableTocSwitch = true # single page table of contents visibility switch
 itemsPerCategory = 5 # maximum number of posts shown in the sidebar.
 sidebarPosition = "right" # bio, profile component layout position
+tocLevels = ["h2", "h3", "h4"] # minimum h2, maximum h4 in your article
+enableSidebarPostsByOrder = false # another lists in the sidebar
 
 # footer
 showPoweredBy = true # show footer text: Powered by Hugo and Zzo theme

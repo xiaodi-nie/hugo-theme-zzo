@@ -105,7 +105,10 @@
       color: themed('archive-key-color');
       background-color: themed('archive-key-background-color');
     }
-    @include animation('slide-in-down .4s .2s 1 ease both');
+
+    &[data-ani="true"] {
+      @include animation('slide-in-down .4s .2s 1 ease both');
+    }
 
     &:not(:first-child) {
       margin: 4rem 0 1rem 0;
@@ -122,7 +125,10 @@
 
     @include flexbox();
     @include align-items(center);
-    @include animation('slide-in-left .2s .5s 1 ease both');
+
+    &[data-ani="true"] {
+      @include animation('slide-in-left .2s .5s 1 ease both');
+    }
   }
 
   &__type {
@@ -170,7 +176,6 @@
   &__title {
     margin-right: 0.5rem;    
     margin-left: 1rem;
-    width: 100%;
     font-family: $title-font;
 
     &[data-title-wrap^="no"] {
@@ -232,6 +237,19 @@
           }
         }
       }
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-weight: bold;
+    font-family: $title-font;
+
+    @include themify($themes) {
+      color: themed('terms-title-color');
+    }
+    @media only screen and (max-width:600px) {
+      margin-bottom: 1rem;
     }
   }
 }
